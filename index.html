@@ -2,144 +2,168 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <title>RICO — Let RICO Cook</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <main id="app">
+<main id="app">
 
-    <!-- INTRO -->
-    <section id="intro" class="intro">
-      <div class="intro-glow"></div>
+  <section id="intro" class="intro">
+    <div class="intro-noise"></div>
 
-      <div class="rico-mark">🦆</div>
+    <div class="rico-logo">R</div>
 
-      <p class="eyebrow">RICO MEME CONTEST</p>
+    <div class="eyebrow">RICO MEME CONTEST</div>
 
-      <h1>LET RICO<br><span>COOK.</span></h1>
+    <h1>LET RICO<br><span>COOK.</span></h1>
 
-      <p class="intro-copy">
-        One tap.<br>
-        One ridiculous entrance.
-      </p>
+    <p>
+      One tap.<br>
+      One ridiculous entrance.
+    </p>
 
-      <button id="startBtn">
-        WATCH RICO COOK
-        <span>↗</span>
-      </button>
+    <button id="startBtn">
+      WATCH RICO COOK
+      <b>↗</b>
+    </button>
 
-      <div class="sound-status">● SOUND ON</div>
-    </section>
+    <div class="sound">● SOUND ON</div>
+  </section>
 
 
-    <!-- CINEMATIC SCENE -->
-    <section id="scene">
+  <section id="scene">
 
-      <div class="sky"></div>
-      <div class="moon"></div>
+    <div class="sky"></div>
+    <div class="orange-glow"></div>
+    <div class="moon"></div>
 
-      <div class="city city-back"></div>
-      <div class="city city-front"></div>
+    <div class="city back"></div>
+    <div class="city front"></div>
 
-      <div class="light-beam beam-one"></div>
-      <div class="light-beam beam-two"></div>
+    <div class="headlight-beam beam-left"></div>
+    <div class="headlight-beam beam-right"></div>
 
-      <div class="atmosphere">
-        <i></i><i></i><i></i><i></i><i></i>
+    <div class="particles">
+      <i></i><i></i><i></i><i></i><i></i>
+      <i></i><i></i><i></i>
+    </div>
+
+    <div id="camera">
+
+      <div class="road">
+        <div class="reflection reflection-one"></div>
+        <div class="reflection reflection-two"></div>
+        <div class="road-mark mark-one"></div>
+        <div class="road-mark mark-two"></div>
       </div>
 
-      <div id="camera">
 
-        <div class="road">
-          <div class="road-line line-one"></div>
-          <div class="road-line line-two"></div>
-        </div>
+      <!-- CAR -->
 
-        <!-- CAR -->
-        <div id="car">
+      <div id="car">
 
-          <div class="car-shadow"></div>
+        <div class="car-shadow"></div>
 
-          <div class="car-body">
-            <div class="car-roof"></div>
-            <div class="car-window"></div>
+        <div class="car-body">
 
-            <div class="headlight left-light"></div>
-            <div class="headlight right-light"></div>
+          <div class="car-roof"></div>
+          <div class="car-glass"></div>
 
-            <div class="wheel wheel-left"></div>
-            <div class="wheel wheel-right"></div>
+          <div class="car-line"></div>
 
-            <div class="door">
-              <span></span>
-            </div>
+          <div class="headlight hl-left"></div>
+          <div class="headlight hl-right"></div>
 
-            <div class="hood"></div>
+          <div class="door">
+            <span></span>
+          </div>
+
+          <div class="hood"></div>
+
+          <div class="wheel wheel-left">
+            <div></div>
+          </div>
+
+          <div class="wheel wheel-right">
+            <div></div>
           </div>
 
         </div>
+      </div>
 
 
-        <!-- RICO -->
-        <div id="rico">
+      <!-- RICO PLACEHOLDER -->
 
-          <div class="rico-shadow"></div>
+      <div id="rico">
 
-          <div class="rico-body">
-            <div class="rico-head">
-              <div class="rico-eye eye-one"></div>
-              <div class="rico-eye eye-two"></div>
-              <div class="rico-beak"></div>
-              <div class="rico-cap"></div>
-            </div>
+        <div class="rico-shadow"></div>
 
-            <div class="rico-necklace necklace-one"></div>
-            <div class="rico-necklace necklace-two"></div>
+        <div class="rico-character">
 
-            <div class="rico-watch"></div>
-
-            <div class="rico-arm arm-one"></div>
-            <div class="rico-arm arm-two"></div>
-
-            <div class="rico-leg leg-one"></div>
-            <div class="rico-leg leg-two"></div>
+          <div class="rico-head">
+            <div class="cap"></div>
+            <div class="eye eye-left"></div>
+            <div class="eye eye-right"></div>
+            <div class="beak"></div>
           </div>
 
+          <div class="chain chain-one"></div>
+          <div class="chain chain-two"></div>
+
+          <div class="rico-body"></div>
+
+          <div class="arm arm-left"></div>
+          <div class="arm arm-right"></div>
+
+          <div class="watch"></div>
+
+          <div class="leg leg-left"></div>
+          <div class="leg leg-right"></div>
+
         </div>
 
-
-        <!-- MONEY -->
-        <div id="money"></div>
-
-        <!-- SMOKE -->
-        <div id="smoke">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
       </div>
 
 
-      <div class="scene-caption">
-        <span>RICO HAS ARRIVED</span>
+      <!-- SMOKE -->
+
+      <div id="smoke">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
 
-      <div id="finalMessage">
-        <small>THE MARKET DOESN'T MOVE RICO.</small>
-        <strong>RICO MOVES<br>THE MARKET.</strong>
-      </div>
 
-      <button id="replay">↻ REPLAY</button>
+      <!-- MONEY -->
 
-    </section>
+      <div id="money"></div>
 
-  </main>
+    </div>
 
-  <script src="script.js"></script>
+
+    <div class="arrival">
+      RICO HAS ARRIVED
+    </div>
+
+
+    <div id="finalMessage">
+      <small>THE MARKET DOESN'T MOVE RICO.</small>
+      <strong>RICO MOVES<br>THE MARKET.</strong>
+    </div>
+
+
+    <button id="replay">↻ REPLAY</button>
+
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+
 </body>
 </html>
