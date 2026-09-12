@@ -2,45 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-
-  <title>RICO — Enter The Pond</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RICO — Let RICO Cook</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<main id="app">
+  <main id="app">
 
-  <!-- =========================
-       INTRO
-  ========================== -->
+    <!-- INTRO -->
+    <section id="intro" class="intro">
+      <div class="intro-glow"></div>
 
-  <section class="intro" id="intro">
+      <div class="rico-mark">🦆</div>
 
-    <div class="noise"></div>
+      <p class="eyebrow">RICO MEME CONTEST</p>
 
-    <div class="intro-glow"></div>
-
-    <div class="intro-content">
-
-      <div class="rico-mark">
-        🦆
-      </div>
-
-      <p class="kicker">
-        RICO MEME CONTEST
-      </p>
-
-      <h1>
-        LET RICO<br>
-        <span>COOK.</span>
-      </h1>
+      <h1>LET RICO<br><span>COOK.</span></h1>
 
       <p class="intro-copy">
         One tap.<br>
@@ -48,175 +27,119 @@
       </p>
 
       <button id="startBtn">
-        <span>WATCH RICO COOK</span>
-        <strong>↗</strong>
+        WATCH RICO COOK
+        <span>↗</span>
       </button>
 
-      <div class="sound-hint">
-        <span class="sound-dot"></span>
-        SOUND ON
+      <div class="sound-status">● SOUND ON</div>
+    </section>
+
+
+    <!-- CINEMATIC SCENE -->
+    <section id="scene">
+
+      <div class="sky"></div>
+      <div class="moon"></div>
+
+      <div class="city city-back"></div>
+      <div class="city city-front"></div>
+
+      <div class="light-beam beam-one"></div>
+      <div class="light-beam beam-two"></div>
+
+      <div class="atmosphere">
+        <i></i><i></i><i></i><i></i><i></i>
       </div>
 
-    </div>
+      <div id="camera">
 
-  </section>
-
-
-  <!-- =========================
-       CINEMATIC SCENE
-  ========================== -->
-
-  <section class="scene" id="scene">
-
-    <div class="vignette"></div>
-
-    <div class="sky-glow"></div>
-
-    <div class="moon"></div>
-
-    <!-- CITY -->
-
-    <div class="city">
-
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-
-    </div>
-
-
-    <!-- LIGHT BEAMS -->
-
-    <div class="light-beam beam-left"></div>
-    <div class="light-beam beam-right"></div>
-
-
-    <!-- GROUND -->
-
-    <div class="ground">
-
-      <div class="road-lines"></div>
-
-    </div>
-
-
-    <!-- CAMERA -->
-
-    <div class="camera" id="camera">
-
-      <!-- =========================
-           LAMBORGHINI
-      ========================== -->
-
-      <div class="car" id="car">
-
-        <div class="car-shadow"></div>
-
-        <div class="car-body">
-
-          <div class="car-window"></div>
-
-          <div class="car-roof"></div>
-
-          <div class="car-door" id="carDoor"></div>
-
-          <div class="car-handle"></div>
-
-          <div class="headlight headlight-left"></div>
-          <div class="headlight headlight-right"></div>
-
-          <div class="wheel wheel-left"></div>
-          <div class="wheel wheel-right"></div>
-
-          <div class="car-front"></div>
-
+        <div class="road">
+          <div class="road-line line-one"></div>
+          <div class="road-line line-two"></div>
         </div>
 
-      </div>
+        <!-- CAR -->
+        <div id="car">
 
+          <div class="car-shadow"></div>
 
-      <!-- =========================
-           RICO
-      ========================== -->
+          <div class="car-body">
+            <div class="car-roof"></div>
+            <div class="car-window"></div>
 
-      <div class="rico" id="rico">
+            <div class="headlight left-light"></div>
+            <div class="headlight right-light"></div>
 
-        <!-- Replace these later with actual transparent assets -->
+            <div class="wheel wheel-left"></div>
+            <div class="wheel wheel-right"></div>
 
-        <div class="rico-chain chain-back"></div>
-        <div class="rico-chain chain-front"></div>
+            <div class="door">
+              <span></span>
+            </div>
 
-        <div class="rico-watch"></div>
-
-        <div class="duck">
-
-          <div class="duck-head">
-
-            <div class="duck-eye eye-left"></div>
-            <div class="duck-eye eye-right"></div>
-
-            <div class="duck-beak"></div>
-
-            <div class="duck-cap"></div>
-
+            <div class="hood"></div>
           </div>
 
-          <div class="duck-body"></div>
+        </div>
 
-          <div class="duck-wing wing-left"></div>
-          <div class="duck-wing wing-right"></div>
 
-          <div class="duck-foot foot-left"></div>
-          <div class="duck-foot foot-right"></div>
+        <!-- RICO -->
+        <div id="rico">
 
+          <div class="rico-shadow"></div>
+
+          <div class="rico-body">
+            <div class="rico-head">
+              <div class="rico-eye eye-one"></div>
+              <div class="rico-eye eye-two"></div>
+              <div class="rico-beak"></div>
+              <div class="rico-cap"></div>
+            </div>
+
+            <div class="rico-necklace necklace-one"></div>
+            <div class="rico-necklace necklace-two"></div>
+
+            <div class="rico-watch"></div>
+
+            <div class="rico-arm arm-one"></div>
+            <div class="rico-arm arm-two"></div>
+
+            <div class="rico-leg leg-one"></div>
+            <div class="rico-leg leg-two"></div>
+          </div>
+
+        </div>
+
+
+        <!-- MONEY -->
+        <div id="money"></div>
+
+        <!-- SMOKE -->
+        <div id="smoke">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
 
       </div>
 
 
-      <!-- =========================
-           MONEY
-      ========================== -->
-
-      <div class="money-layer" id="moneyLayer"></div>
-
-
-      <!-- =========================
-           FINAL FRAME
-      ========================== -->
-
-      <div class="final" id="final">
-
-        <div class="final-inner">
-
-          <p>
-            THE MARKET DOESN'T MOVE RICO.
-          </p>
-
-          <h2>
-            RICO MOVES<br>
-            <span>THE MARKET.</span>
-          </h2>
-
-          <button id="replayBtn">
-            REPLAY ↻
-          </button>
-
-        </div>
-
+      <div class="scene-caption">
+        <span>RICO HAS ARRIVED</span>
       </div>
 
-    </div>
+      <div id="finalMessage">
+        <small>THE MARKET DOESN'T MOVE RICO.</small>
+        <strong>RICO MOVES<br>THE MARKET.</strong>
+      </div>
 
-  </section>
+      <button id="replay">↻ REPLAY</button>
 
-</main>
+    </section>
 
-<script src="script.js"></script>
+  </main>
 
+  <script src="script.js"></script>
 </body>
 </html>
