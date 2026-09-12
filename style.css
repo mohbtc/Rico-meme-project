@@ -1,29 +1,29 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 html,
-body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: #090b0d;
-  font-family: Arial, Helvetica, sans-serif;
+body{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  background:#090807;
+  font-family:Arial,Helvetica,sans-serif;
 }
 
-body {
-  color: #f5f1e8;
+body{
+  color:#f4eee4;
 }
 
-button {
-  font: inherit;
+button{
+  font:inherit;
 }
 
-#app {
-  width: 100%;
-  height: 100%;
+#app{
+  width:100%;
+  height:100%;
 }
 
 
@@ -31,110 +31,145 @@ button {
    INTRO
 ========================= */
 
-.intro {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+.intro{
+  position:fixed;
+  inset:0;
+  z-index:100;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+
   background:
-    radial-gradient(circle at 50% 35%, rgba(157, 255, 35, .10), transparent 30%),
-    #090b0d;
-  text-align: center;
-  transition: opacity .8s ease, transform .8s ease;
+    radial-gradient(
+      circle at 50% 38%,
+      rgba(230,105,24,.11),
+      transparent 32%
+    ),
+    #090807;
+
+  transition:
+    opacity .8s ease,
+    transform .8s ease;
 }
 
-.intro.hide {
-  opacity: 0;
-  transform: scale(1.08);
-  pointer-events: none;
+.intro.hide{
+  opacity:0;
+  transform:scale(1.06);
+  pointer-events:none;
 }
 
-.intro-glow {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: rgba(155, 255, 38, .08);
-  filter: blur(70px);
+.intro-noise{
+  position:absolute;
+  inset:0;
+  opacity:.04;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 2px,
+      #fff 3px
+    );
+  pointer-events:none;
 }
 
-.rico-mark {
-  position: relative;
-  width: 74px;
-  height: 74px;
-  display: grid;
-  place-items: center;
-  margin-bottom: 24px;
-  border: 1px solid rgba(255,255,255,.15);
-  border-radius: 22px;
-  background: rgba(255,255,255,.04);
-  font-size: 38px;
-  box-shadow: 0 0 50px rgba(164,255,38,.08);
+.rico-logo{
+  position:relative;
+  width:72px;
+  height:72px;
+  display:grid;
+  place-items:center;
+  margin-bottom:25px;
+
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:21px;
+
+  background:#15110e;
+
+  color:#e87525;
+  font-size:34px;
+  font-weight:1000;
+
+  box-shadow:
+    0 0 55px rgba(220,89,18,.12);
 }
 
-.eyebrow {
-  position: relative;
-  font-size: 10px;
-  letter-spacing: 4px;
-  font-weight: 800;
-  opacity: .55;
-  margin-bottom: 18px;
+.eyebrow{
+  position:relative;
+  margin-bottom:18px;
+
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:4px;
+
+  opacity:.5;
 }
 
-h1 {
-  position: relative;
-  font-size: clamp(54px, 15vw, 110px);
-  line-height: .82;
-  letter-spacing: -5px;
-  font-weight: 950;
+h1{
+  position:relative;
+
+  font-size:clamp(55px,15vw,110px);
+  line-height:.82;
+  letter-spacing:-5px;
+  font-weight:1000;
 }
 
-h1 span {
-  color: #aaff26;
+h1 span{
+  color:#e87525;
 }
 
-.intro-copy {
-  position: relative;
-  margin-top: 28px;
-  line-height: 1.5;
-  color: rgba(255,255,255,.55);
+.intro p{
+  position:relative;
+  margin-top:28px;
+
+  color:rgba(255,255,255,.48);
+  line-height:1.5;
 }
 
-#startBtn {
-  position: relative;
-  margin-top: 35px;
-  padding: 17px 25px;
-  border: 1px solid rgba(170,255,38,.45);
-  border-radius: 999px;
-  background: #aaff26;
-  color: #080a08;
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  cursor: pointer;
-  box-shadow: 0 0 40px rgba(170,255,38,.15);
-  transition: transform .2s ease, box-shadow .2s ease;
+#startBtn{
+  position:relative;
+  margin-top:35px;
+
+  padding:17px 25px;
+
+  border:1px solid rgba(232,117,37,.55);
+  border-radius:999px;
+
+  background:#e87525;
+  color:#100b08;
+
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1px;
+
+  cursor:pointer;
+
+  box-shadow:
+    0 0 35px rgba(232,117,37,.14);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
 }
 
-#startBtn span {
-  margin-left: 12px;
-  font-size: 16px;
+#startBtn:active{
+  transform:scale(.94);
 }
 
-#startBtn:active {
-  transform: scale(.94);
+#startBtn b{
+  margin-left:10px;
+  font-size:15px;
 }
 
-.sound-status {
-  position: absolute;
-  bottom: 28px;
-  font-size: 9px;
-  letter-spacing: 2px;
-  opacity: .35;
+.sound{
+  position:absolute;
+  bottom:27px;
+
+  font-size:9px;
+  letter-spacing:2px;
+
+  opacity:.3;
 }
 
 
@@ -142,543 +177,908 @@ h1 span {
    SCENE
 ========================= */
 
-#scene {
-  position: fixed;
-  inset: 0;
-  overflow: hidden;
-  opacity: 0;
-  pointer-events: none;
-  background: #090b0d;
+#scene{
+  position:fixed;
+  inset:0;
+  overflow:hidden;
+
+  opacity:0;
+  pointer-events:none;
+
+  background:#090807;
 }
 
-#scene.active {
-  opacity: 1;
-  pointer-events: auto;
+#scene.active{
+  opacity:1;
+  pointer-events:auto;
 }
 
-.sky {
-  position: absolute;
-  inset: 0;
+.sky{
+  position:absolute;
+  inset:0;
+
   background:
-    radial-gradient(circle at 50% 30%, rgba(95,108,120,.18), transparent 32%),
-    linear-gradient(#090b0d 0%, #10151a 65%, #171a1b 100%);
-}
-
-.moon {
-  position: absolute;
-  top: 10%;
-  right: 15%;
-  width: 62px;
-  height: 62px;
-  border-radius: 50%;
-  background: #eee9d8;
-  box-shadow: 0 0 55px rgba(255,245,200,.18);
-  opacity: .8;
-}
-
-.city {
-  position: absolute;
-  left: -5%;
-  bottom: 27%;
-  width: 110%;
-  height: 24%;
-  opacity: .4;
-}
-
-.city-back {
-  background:
-    linear-gradient(to top, #080a0c 0 100%),
-    repeating-linear-gradient(
-      90deg,
-      transparent 0 25px,
-      rgba(255,255,255,.04) 25px 30px,
-      transparent 30px 55px
+    radial-gradient(
+      circle at 50% 42%,
+      rgba(196,75,20,.09),
+      transparent 35%
+    ),
+    linear-gradient(
+      #090807 0%,
+      #100d0b 55%,
+      #18110c 100%
     );
-  clip-path: polygon(
-    0 70%, 5% 60%, 9% 68%, 13% 45%, 17% 60%,
-    22% 40%, 28% 65%, 34% 50%, 40% 62%,
-    47% 35%, 53% 60%, 59% 45%, 65% 65%,
-    72% 38%, 78% 58%, 84% 48%, 90% 63%,
-    96% 45%, 100% 60%, 100% 100%, 0 100%
-  );
 }
 
-.city-front {
-  bottom: 22%;
-  height: 17%;
-  opacity: .7;
-  background: #080a0c;
-  clip-path: polygon(
-    0 65%, 6% 40%, 12% 60%, 18% 35%, 23% 60%,
-    30% 25%, 35% 60%, 42% 40%, 49% 65%,
-    55% 30%, 62% 60%, 70% 38%, 78% 62%,
-    86% 30%, 93% 60%, 100% 40%, 100% 100%, 0 100%
-  );
+.orange-glow{
+  position:absolute;
+
+  width:450px;
+  height:450px;
+
+  left:50%;
+  bottom:10%;
+
+  transform:translateX(-50%);
+
+  border-radius:50%;
+
+  background:rgba(205,78,20,.08);
+
+  filter:blur(90px);
 }
 
-.light-beam {
-  position: absolute;
-  bottom: 25%;
-  width: 180px;
-  height: 75%;
-  opacity: 0;
-  background: linear-gradient(
-    to top,
-    rgba(210,255,155,.12),
-    transparent 70%
-  );
-  transform-origin: bottom;
-  filter: blur(8px);
-}
+.moon{
+  position:absolute;
 
-.beam-one {
-  left: 13%;
-  transform: rotate(18deg);
-}
+  width:58px;
+  height:58px;
 
-.beam-two {
-  right: 13%;
-  transform: rotate(-18deg);
-}
+  right:14%;
+  top:10%;
 
-#scene.active .beam-one,
-#scene.active .beam-two {
-  animation: beamFlash 1.5s ease forwards;
-}
+  border-radius:50%;
 
-@keyframes beamFlash {
-  0% { opacity: 0; }
-  25% { opacity: .8; }
-  100% { opacity: .08; }
+  background:#efe5d0;
+
+  opacity:.7;
+
+  box-shadow:
+    0 0 55px rgba(255,218,170,.13);
 }
 
 
 /* =========================
-   CAMERA / ROAD
+   CITY
 ========================= */
 
-#camera {
-  position: absolute;
-  inset: 0;
-  transform-origin: 50% 70%;
+.city{
+  position:absolute;
+  left:-5%;
+  width:110%;
+  background:#080807;
 }
 
-#camera.shake {
-  animation: cameraShake .45s ease;
+.city.back{
+  bottom:28%;
+  height:22%;
+
+  opacity:.55;
+
+  clip-path:polygon(
+    0 70%,
+    5% 58%,
+    10% 68%,
+    15% 44%,
+    20% 62%,
+    26% 38%,
+    32% 61%,
+    38% 47%,
+    44% 64%,
+    50% 34%,
+    56% 60%,
+    62% 43%,
+    69% 64%,
+    75% 40%,
+    81% 61%,
+    87% 45%,
+    94% 62%,
+    100% 47%,
+    100% 100%,
+    0 100%
+  );
 }
 
-#camera.zoom {
-  animation: cameraZoom 1.7s cubic-bezier(.2,.8,.2,1) forwards;
+.city.front{
+  bottom:22%;
+  height:17%;
+
+  opacity:.9;
+
+  clip-path:polygon(
+    0 65%,
+    7% 43%,
+    13% 62%,
+    20% 37%,
+    27% 60%,
+    34% 27%,
+    40% 59%,
+    48% 41%,
+    55% 64%,
+    62% 31%,
+    70% 60%,
+    78% 39%,
+    86% 63%,
+    93% 34%,
+    100% 57%,
+    100% 100%,
+    0 100%
+  );
 }
 
-@keyframes cameraShake {
-  0%,100% { transform: translate(0,0); }
-  20% { transform: translate(-7px,2px); }
-  40% { transform: translate(6px,-3px); }
-  60% { transform: translate(-4px,2px); }
-  80% { transform: translate(3px,-1px); }
-}
 
-@keyframes cameraZoom {
-  from { transform: scale(1); }
-  to { transform: scale(1.13); }
-}
+/* =========================
+   LIGHT
+========================= */
 
-.road {
-  position: absolute;
-  left: -10%;
-  bottom: 0;
-  width: 120%;
-  height: 34%;
+.headlight-beam{
+  position:absolute;
+
+  bottom:25%;
+
+  width:210px;
+  height:70%;
+
+  opacity:0;
+
   background:
     linear-gradient(
-      165deg,
-      transparent 0 32%,
-      rgba(255,255,255,.035) 32.2% 32.5%,
-      transparent 32.7%
-    ),
-    #0d1012;
-  transform: perspective(400px) rotateX(18deg);
-  transform-origin: bottom;
+      to top,
+      rgba(255,181,94,.13),
+      transparent 70%
+    );
+
+  filter:blur(9px);
+
+  transform-origin:bottom;
 }
 
-.road::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    ellipse at center,
-    transparent 20%,
-    rgba(0,0,0,.65) 85%
+.beam-left{
+  left:5%;
+  transform:rotate(18deg);
+}
+
+.beam-right{
+  right:5%;
+  transform:rotate(-18deg);
+}
+
+#scene.lights .headlight-beam{
+  animation:lights 1.2s ease forwards;
+}
+
+@keyframes lights{
+  0%{
+    opacity:0;
+  }
+
+  20%{
+    opacity:.9;
+  }
+
+  100%{
+    opacity:.12;
+  }
+}
+
+
+/* =========================
+   CAMERA
+========================= */
+
+#camera{
+  position:absolute;
+  inset:0;
+
+  transform-origin:50% 70%;
+}
+
+#camera.shake{
+  animation:shake .5s ease;
+}
+
+#camera.zoom{
+  animation:zoom 1.7s cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+@keyframes shake{
+  0%,100%{
+    transform:translate(0,0);
+  }
+
+  20%{
+    transform:translate(-7px,2px);
+  }
+
+  40%{
+    transform:translate(6px,-3px);
+  }
+
+  60%{
+    transform:translate(-4px,2px);
+  }
+
+  80%{
+    transform:translate(3px,-1px);
+  }
+}
+
+@keyframes zoom{
+  from{
+    transform:scale(1);
+  }
+
+  to{
+    transform:scale(1.12);
+  }
+}
+
+
+/* =========================
+   ROAD
+========================= */
+
+.road{
+  position:absolute;
+
+  left:-10%;
+  bottom:0;
+
+  width:120%;
+  height:35%;
+
+  background:#100d0b;
+
+  transform:
+    perspective(450px)
+    rotateX(17deg);
+
+  transform-origin:bottom;
+}
+
+.road::after{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      transparent 20%,
+      rgba(0,0,0,.75) 90%
+    );
+}
+
+.reflection{
+  position:absolute;
+
+  bottom:45%;
+
+  height:110px;
+
+  width:150px;
+
+  opacity:.2;
+
+  filter:blur(12px);
+
+  transform:skewX(-20deg);
+}
+
+.reflection-one{
+  left:25%;
+
+  background:linear-gradient(
+    to bottom,
+    rgba(232,117,37,.5),
+    transparent
   );
 }
 
-.road-line {
-  position: absolute;
-  width: 180px;
-  height: 2px;
-  background: rgba(255,255,255,.18);
-  transform: rotate(-8deg);
+.reflection-two{
+  right:25%;
+
+  background:linear-gradient(
+    to bottom,
+    rgba(232,117,37,.35),
+    transparent
+  );
 }
 
-.line-one {
-  left: 15%;
-  top: 52%;
+.road-mark{
+  position:absolute;
+
+  width:130px;
+  height:2px;
+
+  background:rgba(255,255,255,.12);
+
+  transform:rotate(-7deg);
 }
 
-.line-two {
-  right: 12%;
-  top: 67%;
+.mark-one{
+  left:14%;
+  top:54%;
+}
+
+.mark-two{
+  right:12%;
+  top:68%;
 }
 
 
 /* =========================
-   LAMBO
+   CAR
 ========================= */
 
-#car {
-  position: absolute;
-  left: 50%;
-  bottom: 21%;
-  width: 300px;
-  height: 145px;
-  transform: translateX(-50%);
-  z-index: 20;
+#car{
+  position:absolute;
+
+  left:50%;
+  bottom:21%;
+
+  width:310px;
+  height:155px;
+
+  transform:translateX(-50%);
+
+  z-index:20;
 }
 
-.car-shadow {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -8px;
-  height: 30px;
-  border-radius: 50%;
-  background: rgba(0,0,0,.8);
-  filter: blur(12px);
+.car-shadow{
+  position:absolute;
+
+  left:-10px;
+  right:-10px;
+  bottom:-5px;
+
+  height:28px;
+
+  border-radius:50%;
+
+  background:#000;
+
+  filter:blur(12px);
 }
 
-.car-body {
-  position: absolute;
-  left: 0;
-  bottom: 15px;
-  width: 100%;
-  height: 82px;
-  border-radius: 75px 85px 22px 18px;
+.car-body{
+  position:absolute;
+
+  left:0;
+  bottom:15px;
+
+  width:100%;
+  height:84px;
+
+  border-radius:
+    75px
+    85px
+    20px
+    20px;
+
   background:
-    linear-gradient(145deg, #343b42, #111416 65%);
-  border: 2px solid rgba(255,255,255,.13);
+    linear-gradient(
+      145deg,
+      #3a3029,
+      #151311 55%,
+      #0c0b0a
+    );
+
+  border:
+    1px solid rgba(255,255,255,.13);
+
   box-shadow:
-    inset 0 8px 20px rgba(255,255,255,.06),
-    0 20px 35px rgba(0,0,0,.6);
+    inset 0 8px 25px rgba(255,255,255,.05),
+    0 25px 45px rgba(0,0,0,.65);
 }
 
-.car-roof {
-  position: absolute;
-  width: 125px;
-  height: 62px;
-  left: 87px;
-  top: -48px;
-  border-radius: 65px 75px 0 0;
-  background: #252a2e;
-  border: 2px solid rgba(255,255,255,.1);
+.car-roof{
+  position:absolute;
+
+  width:130px;
+  height:62px;
+
+  left:88px;
+  top:-49px;
+
+  border-radius:
+    65px
+    75px
+    0
+    0;
+
+  background:#211d1a;
+
+  border:
+    1px solid rgba(255,255,255,.1);
 }
 
-.car-window {
-  position: absolute;
-  left: 100px;
-  top: -37px;
-  width: 95px;
-  height: 39px;
-  background: #07090a;
-  clip-path: polygon(15% 100%, 30% 0, 85% 0, 100% 100%);
+.car-glass{
+  position:absolute;
+
+  left:100px;
+  top:-37px;
+
+  width:98px;
+  height:40px;
+
+  background:#070706;
+
+  clip-path:polygon(
+    15% 100%,
+    28% 0,
+    84% 0,
+    100% 100%
+  );
 }
 
-.headlight {
-  position: absolute;
-  top: 31px;
-  width: 42px;
-  height: 11px;
-  border-radius: 50%;
-  background: #dfffad;
-  box-shadow: 0 0 25px 8px rgba(184,255,100,.4);
-  opacity: .3;
+.car-line{
+  position:absolute;
+
+  left:43px;
+  right:45px;
+  top:45px;
+
+  height:1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(232,117,37,.35),
+      transparent
+    );
 }
 
-.left-light {
-  left: 10px;
+.headlight{
+  position:absolute;
+
+  top:31px;
+
+  width:43px;
+  height:10px;
+
+  border-radius:50%;
+
+  background:#ffd7a0;
+
+  box-shadow:
+    0 0 25px 9px rgba(255,166,70,.35);
+
+  opacity:.3;
 }
 
-.right-light {
-  right: 13px;
+.hl-left{
+  left:9px;
 }
 
-.wheel {
-  position: absolute;
-  bottom: -23px;
-  width: 57px;
-  height: 57px;
-  border-radius: 50%;
-  background: #070808;
-  border: 9px solid #1b1d1f;
-  box-shadow: inset 0 0 0 5px #050606;
+.hl-right{
+  right:12px;
 }
 
-.wheel-left {
-  left: 37px;
+.door{
+  position:absolute;
+
+  left:104px;
+  top:4px;
+
+  width:73px;
+  height:62px;
+
+  border-left:
+    1px solid rgba(255,255,255,.12);
+
+  transform-origin:left center;
+
+  transition:
+    transform .7s cubic-bezier(.2,.8,.2,1);
 }
 
-.wheel-right {
-  right: 38px;
+.door span{
+  position:absolute;
+
+  right:6px;
+  top:22px;
+
+  width:13px;
+  height:2px;
+
+  background:rgba(255,255,255,.3);
 }
 
-.door {
-  position: absolute;
-  left: 104px;
-  top: 5px;
-  width: 72px;
-  height: 60px;
-  border-left: 1px solid rgba(255,255,255,.13);
-  border-bottom: 1px solid rgba(255,255,255,.06);
-  transform-origin: left center;
-  transition: transform .7s cubic-bezier(.2,.8,.2,1);
+#scene.door-open .door{
+  transform:
+    rotateY(-53deg)
+    translateX(-12px);
 }
 
-.door span {
-  position: absolute;
-  right: 7px;
-  top: 22px;
-  width: 13px;
-  height: 2px;
-  background: rgba(255,255,255,.3);
+.hood{
+  position:absolute;
+
+  left:147px;
+  top:-6px;
+
+  width:150px;
+  height:47px;
+
+  border-radius:
+    0
+    60px
+    0
+    0;
+
+  background:
+    linear-gradient(
+      150deg,
+      #403731,
+      #171513
+    );
 }
 
-#scene.door-open .door {
-  transform: rotateY(-52deg) translateX(-12px);
+.wheel{
+  position:absolute;
+
+  bottom:-24px;
+
+  width:58px;
+  height:58px;
+
+  border-radius:50%;
+
+  background:#050505;
+
+  border:
+    9px solid #191716;
+
+  box-shadow:
+    inset 0 0 0 4px #090807;
 }
 
-.hood {
-  position: absolute;
-  left: 150px;
-  top: -7px;
-  width: 145px;
-  height: 46px;
-  border-radius: 0 60px 0 0;
-  background: linear-gradient(150deg, #363c42, #171a1c);
+.wheel-left{
+  left:35px;
 }
 
-
-/* =========================
-   RICO PLACEHOLDER
-========================= */
-
-#rico {
-  position: absolute;
-  left: calc(50% - 104px);
-  bottom: 32%;
-  width: 62px;
-  height: 112px;
-  z-index: 30;
-  opacity: 0;
-  transform: translateX(-50%) scale(.95);
+.wheel-right{
+  right:37px;
 }
 
-.rico-body {
-  position: absolute;
-  inset: 0;
-}
+.wheel div{
+  position:absolute;
 
-.rico-head {
-  position: absolute;
-  top: 0;
-  left: 6px;
-  width: 50px;
-  height: 50px;
-  border-radius: 48% 48% 45% 45%;
-  background: #e88a28;
-  border: 3px solid #111;
-}
+  inset:10px;
 
-.rico-eye {
-  position: absolute;
-  top: 19px;
-  width: 5px;
-  height: 3px;
-  border-radius: 50%;
-  background: #111;
-}
+  border:
+    1px solid rgba(232,117,37,.35);
 
-.eye-one {
-  left: 13px;
-}
-
-.eye-two {
-  right: 13px;
-}
-
-.rico-beak {
-  position: absolute;
-  left: 17px;
-  bottom: 7px;
-  width: 19px;
-  height: 9px;
-  border-radius: 40%;
-  background: #d96c22;
-  border: 2px solid #111;
-}
-
-.rico-cap {
-  position: absolute;
-  top: -6px;
-  left: 2px;
-  width: 49px;
-  height: 19px;
-  border-radius: 30px 30px 8px 8px;
-  background: #656b70;
-  border: 3px solid #111;
-}
-
-.rico-necklace {
-  position: absolute;
-  left: 10px;
-  width: 40px;
-  height: 25px;
-  border: 4px solid #e7bb3b;
-  border-top: 0;
-  border-radius: 0 0 50% 50%;
-  z-index: 3;
-}
-
-.necklace-one {
-  top: 39px;
-}
-
-.necklace-two {
-  top: 45px;
-  transform: scale(.78);
-}
-
-.rico-watch {
-  position: absolute;
-  top: 61px;
-  right: 1px;
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  background: #e6bd3c;
-  border: 2px solid #111;
-  z-index: 5;
-}
-
-.rico-arm {
-  position: absolute;
-  top: 51px;
-  width: 11px;
-  height: 45px;
-  border-radius: 10px;
-  background: #d97925;
-  border: 3px solid #111;
-}
-
-.arm-one {
-  left: 1px;
-  transform: rotate(12deg);
-}
-
-.arm-two {
-  right: 1px;
-  transform: rotate(-12deg);
-}
-
-.rico-leg {
-  position: absolute;
-  bottom: 0;
-  width: 12px;
-  height: 40px;
-  border-radius: 10px;
-  background: #d97925;
-  border: 3px solid #111;
-  transform-origin: top;
-}
-
-.leg-one {
-  left: 14px;
-}
-
-.leg-two {
-  right: 14px;
-}
-
-.rico-shadow {
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 65px;
-  height: 13px;
-  border-radius: 50%;
-  background: rgba(0,0,0,.45);
-  filter: blur(5px);
+  border-radius:50%;
 }
 
 
 /* =========================
-   RICO MOTION STATES
+   RICO
 ========================= */
 
-#scene.rico-enter #rico {
-  opacity: 1;
-  animation: ricoStepOut .8s cubic-bezier(.2,.8,.2,1) forwards;
+#rico{
+  position:absolute;
+
+  left:calc(50% - 105px);
+  bottom:32%;
+
+  width:65px;
+  height:116px;
+
+  z-index:30;
+
+  opacity:0;
 }
 
-@keyframes ricoStepOut {
-  0% {
-    transform: translate(-40px, 20px) scale(.85);
-  }
-
-  100% {
-    transform: translate(-5px, 0) scale(1);
-  }
+.rico-character{
+  position:absolute;
+  inset:0;
 }
 
-#scene.rico-walk #rico {
+.rico-head{
+  position:absolute;
+
+  left:7px;
+  top:0;
+
+  width:52px;
+  height:51px;
+
+  border-radius:
+    48%
+    48%
+    45%
+    45%;
+
+  background:#e87525;
+
+  border:
+    3px solid #111;
+}
+
+.cap{
+  position:absolute;
+
+  left:1px;
+  top:-7px;
+
+  width:50px;
+  height:19px;
+
+  border-radius:
+    30px
+    30px
+    7px
+    7px;
+
+  background:#66615a;
+
+  border:3px solid #111;
+}
+
+.eye{
+  position:absolute;
+
+  top:20px;
+
+  width:7px;
+  height:3px;
+
+  border-radius:50%;
+
+  background:#111;
+}
+
+.eye-left{
+  left:13px;
+}
+
+.eye-right{
+  right:13px;
+}
+
+.beak{
+  position:absolute;
+
+  left:17px;
+  bottom:7px;
+
+  width:20px;
+  height:9px;
+
+  border-radius:40%;
+
+  background:#d8661f;
+
+  border:2px solid #111;
+}
+
+.rico-body{
+  position:absolute;
+
+  left:12px;
+  top:43px;
+
+  width:41px;
+  height:54px;
+
+  border-radius:
+    40%
+    40%
+    35%
+    35%;
+
+  background:#d96e22;
+
+  border:
+    3px solid #111;
+}
+
+.chain{
+  position:absolute;
+
+  left:12px;
+
+  width:40px;
+  height:25px;
+
+  border:
+    4px solid #e6b936;
+
+  border-top:0;
+
+  border-radius:
+    0
+    0
+    50%
+    50%;
+
+  z-index:4;
+}
+
+.chain-one{
+  top:39px;
+}
+
+.chain-two{
+  top:45px;
+
+  transform:scale(.78);
+}
+
+.arm{
+  position:absolute;
+
+  top:53px;
+
+  width:12px;
+  height:45px;
+
+  border-radius:10px;
+
+  background:#d96e22;
+
+  border:3px solid #111;
+
+  transform-origin:top;
+}
+
+.arm-left{
+  left:1px;
+  transform:rotate(12deg);
+}
+
+.arm-right{
+  right:1px;
+  transform:rotate(-12deg);
+}
+
+.watch{
+  position:absolute;
+
+  right:0;
+  top:62px;
+
+  width:12px;
+  height:12px;
+
+  border-radius:50%;
+
+  background:#e6b936;
+
+  border:2px solid #111;
+
+  z-index:8;
+}
+
+.leg{
+  position:absolute;
+
+  bottom:0;
+
+  width:12px;
+  height:41px;
+
+  border-radius:10px;
+
+  background:#d96e22;
+
+  border:3px solid #111;
+
+  transform-origin:top;
+}
+
+.leg-left{
+  left:15px;
+}
+
+.leg-right{
+  right:15px;
+}
+
+.rico-shadow{
+  position:absolute;
+
+  left:0;
+  bottom:-6px;
+
+  width:68px;
+  height:14px;
+
+  border-radius:50%;
+
+  background:#000;
+
+  filter:blur(6px);
+}
+
+
+/* =========================
+   RICO ANIMATION
+========================= */
+
+#scene.rico-enter #rico{
+  opacity:1;
+
   animation:
-    ricoWalk 1.05s cubic-bezier(.2,.8,.2,1) forwards,
-    bodyBob .25s ease-in-out 3;
+    step-out
+    .75s
+    cubic-bezier(.2,.8,.2,1)
+    forwards;
 }
 
-@keyframes ricoWalk {
-  from {
-    left: calc(50% - 104px);
-    bottom: 32%;
+@keyframes step-out{
+  from{
+    transform:
+      translate(-35px,20px)
+      scale(.86);
   }
 
-  to {
-    left: calc(50% + 35px);
-    bottom: 28%;
+  to{
+    transform:
+      translate(0,0)
+      scale(1);
   }
 }
 
-@keyframes bodyBob {
-  0%,100% { margin-top: 0; }
-  50% { margin-top: -5px; }
+#scene.rico-walk #rico{
+  animation:
+    walk
+    1.05s
+    cubic-bezier(.2,.8,.2,1)
+    forwards;
 }
 
-#scene.rico-sit #rico {
-  left: calc(50% + 42px);
-  bottom: 31%;
-  opacity: 1;
-  transform: translateX(-50%) rotate(-3deg) scale(1.08);
+@keyframes walk{
+
+  from{
+    left:calc(50% - 105px);
+    bottom:32%;
+  }
+
+  to{
+    left:calc(50% + 34px);
+    bottom:28%;
+  }
+}
+
+#scene.rico-sit #rico{
+
+  left:calc(50% + 43px);
+  bottom:31%;
+
+  opacity:1;
+
+  transform:
+    translateX(-50%)
+    rotate(-3deg)
+    scale(1.07);
+
   transition:
     left .65s cubic-bezier(.2,.8,.2,1),
     bottom .65s cubic-bezier(.2,.8,.2,1),
     transform .65s ease;
 }
 
-#scene.rico-sit .leg-one {
-  transform: rotate(72deg);
+#scene.rico-sit .leg-left{
+  transform:rotate(72deg);
 }
 
-#scene.rico-sit .leg-two {
-  transform: rotate(76deg);
+#scene.rico-sit .leg-right{
+  transform:rotate(76deg);
 }
 
 
@@ -686,51 +1086,71 @@ h1 span {
    SMOKE
 ========================= */
 
-#smoke {
-  position: absolute;
-  left: 50%;
-  bottom: 22%;
-  width: 300px;
-  height: 100px;
-  transform: translateX(-50%);
-  z-index: 18;
-  pointer-events: none;
+#smoke{
+  position:absolute;
+
+  left:50%;
+  bottom:21%;
+
+  width:310px;
+  height:110px;
+
+  transform:translateX(-50%);
+
+  z-index:18;
+
+  pointer-events:none;
 }
 
-#smoke span {
-  position: absolute;
-  bottom: 0;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background: rgba(190,200,205,.12);
-  filter: blur(12px);
-  opacity: 0;
+#smoke span{
+  position:absolute;
+
+  bottom:0;
+
+  width:45px;
+  height:45px;
+
+  border-radius:50%;
+
+  background:rgba(210,185,160,.11);
+
+  filter:blur(13px);
+
+  opacity:0;
 }
 
-#smoke span:nth-child(1) { left: 20%; }
-#smoke span:nth-child(2) { left: 38%; }
-#smoke span:nth-child(3) { left: 55%; }
-#smoke span:nth-child(4) { left: 72%; }
+#smoke span:nth-child(1){left:15%}
+#smoke span:nth-child(2){left:31%}
+#smoke span:nth-child(3){left:48%}
+#smoke span:nth-child(4){left:64%}
+#smoke span:nth-child(5){left:78%}
 
-#scene.smoke .smoke span,
-#scene.smoke #smoke span {
-  animation: smokeRise 1.8s ease-out forwards;
+#scene.smoke #smoke span{
+  animation:
+    smoke-rise
+    1.9s
+    ease-out
+    forwards;
 }
 
-@keyframes smokeRise {
-  from {
-    opacity: 0;
-    transform: translateY(10px) scale(.5);
+@keyframes smoke-rise{
+
+  0%{
+    opacity:0;
+    transform:
+      translateY(10px)
+      scale(.5);
   }
 
-  30% {
-    opacity: .8;
+  30%{
+    opacity:.8;
   }
 
-  to {
-    opacity: 0;
-    transform: translateY(-80px) scale(2);
+  100%{
+    opacity:0;
+    transform:
+      translateY(-85px)
+      scale(2);
   }
 }
 
@@ -739,43 +1159,69 @@ h1 span {
    MONEY
 ========================= */
 
-#money {
-  position: absolute;
-  inset: 0;
-  z-index: 50;
-  pointer-events: none;
+#money{
+  position:absolute;
+  inset:0;
+
+  z-index:55;
+
+  pointer-events:none;
 }
 
-.bill {
-  position: absolute;
-  width: 31px;
-  height: 14px;
-  border: 1px solid rgba(170,255,38,.45);
-  background: #789b43;
-  box-shadow: 0 0 7px rgba(170,255,38,.12);
-  opacity: 0;
+.bill{
+  position:absolute;
+
+  width:31px;
+  height:14px;
+
+  border:
+    1px solid rgba(245,194,65,.55);
+
+  background:
+    linear-gradient(
+      135deg,
+      #5e6d32,
+      #a1a951
+    );
+
+  box-shadow:
+    0 0 7px rgba(245,194,65,.08);
+
+  opacity:0;
 }
 
-#money.burst .bill {
-  animation: moneyFly var(--time) cubic-bezier(.1,.6,.2,1) forwards;
+#money.burst .bill{
+  animation:
+    money-fly
+    var(--time)
+    cubic-bezier(.1,.6,.2,1)
+    forwards;
 }
 
-@keyframes moneyFly {
-  0% {
-    left: 50%;
-    top: 65%;
-    opacity: 0;
-    transform: translate(-50%,-50%) scale(.2) rotate(0deg);
+@keyframes money-fly{
+
+  0%{
+    left:50%;
+    top:64%;
+
+    opacity:0;
+
+    transform:
+      translate(-50%,-50%)
+      scale(.15)
+      rotate(0);
   }
 
-  12% {
-    opacity: 1;
+  12%{
+    opacity:1;
   }
 
-  100% {
-    left: var(--x);
-    top: var(--y);
-    opacity: 0;
+  100%{
+    left:var(--x);
+    top:var(--y);
+
+    opacity:0;
+
     transform:
       translate(-50%,-50%)
       scale(1)
@@ -785,139 +1231,176 @@ h1 span {
 
 
 /* =========================
-   FINAL
+   PARTICLES
 ========================= */
 
-.scene-caption {
-  position: absolute;
-  top: 9%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 9px;
-  letter-spacing: 4px;
-  opacity: 0;
-  transition: opacity .5s ease;
+.particles{
+  position:absolute;
+  inset:0;
+
+  z-index:6;
+  pointer-events:none;
 }
 
-#scene.rico-enter .scene-caption {
-  opacity: .35;
+.particles i{
+  position:absolute;
+
+  width:2px;
+  height:2px;
+
+  border-radius:50%;
+
+  background:#e87525;
+
+  opacity:0;
+
+  animation:
+    float
+    5s
+    linear
+    infinite;
 }
 
-#finalMessage {
-  position: absolute;
-  left: 50%;
-  bottom: 8%;
-  width: 90%;
-  transform: translate(-50%, 25px);
-  text-align: center;
-  opacity: 0;
-  transition: all .8s cubic-bezier(.2,.8,.2,1);
-  z-index: 70;
-}
+.particles i:nth-child(1){left:17%;top:40%}
+.particles i:nth-child(2){left:29%;top:30%;animation-delay:1s}
+.particles i:nth-child(3){left:44%;top:23%;animation-delay:2s}
+.particles i:nth-child(4){left:61%;top:35%;animation-delay:3s}
+.particles i:nth-child(5){left:75%;top:25%;animation-delay:1.5s}
+.particles i:nth-child(6){left:84%;top:48%;animation-delay:2.5s}
+.particles i:nth-child(7){left:9%;top:52%;animation-delay:3.5s}
+.particles i:nth-child(8){left:53%;top:17%;animation-delay:4s}
 
-#finalMessage small {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 8px;
-  letter-spacing: 3px;
-  opacity: .5;
-}
+@keyframes float{
 
-#finalMessage strong {
-  font-size: clamp(25px, 7vw, 55px);
-  line-height: .9;
-  letter-spacing: -2px;
-}
+  0%{
+    opacity:0;
+    transform:translateY(20px);
+  }
 
-#scene.final #finalMessage {
-  opacity: 1;
-  transform: translate(-50%, 0);
-}
+  30%{
+    opacity:.65;
+  }
 
-#replay {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  z-index: 90;
-  padding: 10px 14px;
-  border: 1px solid rgba(255,255,255,.15);
-  border-radius: 999px;
-  background: rgba(0,0,0,.3);
-  color: white;
-  font-size: 9px;
-  letter-spacing: 1px;
-  opacity: 0;
-  cursor: pointer;
-}
-
-#scene.final #replay {
-  opacity: .7;
+  100%{
+    opacity:0;
+    transform:translateY(-80px);
+  }
 }
 
 
 /* =========================
-   ATMOSPHERE
+   FINAL
 ========================= */
 
-.atmosphere {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 5;
+.arrival{
+  position:absolute;
+
+  top:9%;
+  left:50%;
+
+  transform:
+    translateX(-50%)
+    translateY(-8px);
+
+  font-size:9px;
+  letter-spacing:4px;
+
+  opacity:0;
+
+  transition:
+    opacity .5s ease,
+    transform .5s ease;
 }
 
-.atmosphere i {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background: rgba(255,255,255,.3);
-  border-radius: 50%;
-  animation: floatParticle 5s linear infinite;
+#scene.rico-enter .arrival{
+  opacity:.38;
+
+  transform:
+    translateX(-50%)
+    translateY(0);
 }
 
-.atmosphere i:nth-child(1) {
-  left: 20%;
-  top: 35%;
+#finalMessage{
+  position:absolute;
+
+  left:50%;
+  bottom:8%;
+
+  width:92%;
+
+  transform:
+    translate(-50%,25px);
+
+  text-align:center;
+
+  opacity:0;
+
+  z-index:70;
+
+  transition:
+    opacity .8s ease,
+    transform .8s cubic-bezier(.2,.8,.2,1);
 }
 
-.atmosphere i:nth-child(2) {
-  left: 72%;
-  top: 42%;
-  animation-delay: 1s;
+#finalMessage small{
+  display:block;
+
+  margin-bottom:8px;
+
+  font-size:8px;
+  letter-spacing:3px;
+
+  opacity:.48;
 }
 
-.atmosphere i:nth-child(3) {
-  left: 43%;
-  top: 28%;
-  animation-delay: 2s;
+#finalMessage strong{
+  font-size:
+    clamp(
+      25px,
+      7vw,
+      55px
+    );
+
+  line-height:.9;
+  letter-spacing:-2px;
 }
 
-.atmosphere i:nth-child(4) {
-  left: 85%;
-  top: 25%;
-  animation-delay: 3s;
+#scene.final #finalMessage{
+  opacity:1;
+
+  transform:
+    translate(-50%,0);
 }
 
-.atmosphere i:nth-child(5) {
-  left: 12%;
-  top: 50%;
-  animation-delay: 1.5s;
+#replay{
+  position:absolute;
+
+  right:20px;
+  top:20px;
+
+  z-index:90;
+
+  padding:10px 14px;
+
+  border:
+    1px solid rgba(255,255,255,.14);
+
+  border-radius:999px;
+
+  background:rgba(0,0,0,.35);
+
+  color:#fff;
+
+  font-size:9px;
+  letter-spacing:1px;
+
+  opacity:0;
+
+  cursor:pointer;
 }
 
-@keyframes floatParticle {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  30% {
-    opacity: .7;
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateY(-70px);
-  }
+#scene.final #replay{
+  opacity:.7;
 }
 
 
@@ -925,27 +1408,34 @@ h1 span {
    MOBILE
 ========================= */
 
-@media (max-width: 600px) {
+@media(max-width:600px){
 
-  #car {
-    width: 285px;
-    transform: translateX(-50%) scale(.92);
+  #car{
+    width:285px;
+    transform:
+      translateX(-50%)
+      scale(.94);
   }
 
-  #rico {
-    transform: translateX(-50%) scale(.9);
+  #rico{
+    transform:
+      translateX(-50%)
+      scale(.92);
   }
 
-  #scene.rico-sit #rico {
-    transform: translateX(-50%) rotate(-3deg) scale(.98);
+  #scene.rico-sit #rico{
+    transform:
+      translateX(-50%)
+      rotate(-3deg)
+      scale(.99);
   }
 
-  .moon {
-    width: 48px;
-    height: 48px;
+  .moon{
+    width:47px;
+    height:47px;
   }
 
-  .finalMessage strong {
-    letter-spacing: -1px;
+  #finalMessage strong{
+    letter-spacing:-1px;
   }
 }
