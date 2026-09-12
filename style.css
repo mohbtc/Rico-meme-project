@@ -1,0 +1,955 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #050505;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  color: #fff;
+}
+
+button {
+  font: inherit;
+}
+
+.experience {
+  width: 100%;
+  height: 100dvh;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    radial-gradient(circle at 50% 35%, #242424 0%, #090909 48%, #000 100%);
+
+  transition:
+    opacity 0.9s ease,
+    transform 1s cubic-bezier(.7,0,.2,1);
+}
+
+.intro.hide {
+  opacity: 0;
+  transform: scale(1.08);
+  pointer-events: none;
+}
+
+.grain {
+  position: absolute;
+  inset: -50%;
+
+  opacity: .07;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+
+  pointer-events: none;
+}
+
+.intro-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(90%, 500px);
+
+  animation: introFloat 4s ease-in-out infinite;
+}
+
+.duck-badge {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 25px;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 36px;
+
+  border-radius: 50%;
+
+  background: #f5b900;
+
+  box-shadow:
+    0 0 45px rgba(245,185,0,.25);
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 5px;
+  font-weight: 800;
+
+  color: #f5b900;
+
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: clamp(55px, 15vw, 100px);
+  line-height: .82;
+  letter-spacing: -5px;
+  font-weight: 1000;
+}
+
+h1 span {
+  color: #f5b900;
+}
+
+.sub {
+  margin: 25px 0 32px;
+
+  color: #999;
+
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+#startBtn {
+  width: min(100%, 330px);
+
+  border: 0;
+  border-radius: 100px;
+
+  padding: 18px 22px;
+
+  background: #f5b900;
+  color: #050505;
+
+  font-weight: 1000;
+  letter-spacing: 1px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 15px 45px rgba(245,185,0,.2);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+#startBtn:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 20px 60px rgba(245,185,0,.35);
+}
+
+#startBtn b {
+  font-size: 24px;
+}
+
+.intro-content small {
+  display: block;
+
+  margin-top: 18px;
+
+  font-size: 9px;
+  letter-spacing: 3px;
+
+  color: #555;
+}
+
+
+/* =========================
+   SCENE
+========================= */
+
+.scene {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #080808 0%,
+      #111 48%,
+      #181818 100%
+    );
+
+  opacity: 0;
+
+  transition: opacity .8s ease;
+}
+
+.scene.active {
+  opacity: 1;
+}
+
+.scene-light {
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  left: 50%;
+  top: 20%;
+
+  transform: translateX(-50%);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(245,185,0,.12),
+      transparent 65%
+    );
+}
+
+.moon {
+  position: absolute;
+
+  width: 90px;
+  height: 90px;
+
+  top: 8%;
+  right: 12%;
+
+  border-radius: 50%;
+
+  background: #eee;
+
+  box-shadow:
+    0 0 70px rgba(255,255,255,.1);
+}
+
+
+/* =========================
+   CITY
+========================= */
+
+.city {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 28%;
+
+  height: 25%;
+
+  display: flex;
+  align-items: flex-end;
+  gap: 7px;
+
+  opacity: .4;
+}
+
+.city i {
+  flex: 1;
+
+  display: block;
+
+  background: #0a0a0a;
+
+  min-height: 30px;
+}
+
+.city i:nth-child(1) {
+  height: 60%;
+}
+
+.city i:nth-child(2) {
+  height: 100%;
+}
+
+.city i:nth-child(3) {
+  height: 70%;
+}
+
+.city i:nth-child(4) {
+  height: 90%;
+}
+
+.city i:nth-child(5) {
+  height: 50%;
+}
+
+
+/* =========================
+   GROUND
+========================= */
+
+.ground {
+  position: absolute;
+
+  left: -10%;
+  right: -10%;
+  bottom: -20%;
+
+  height: 55%;
+
+  transform: perspective(400px) rotateX(55deg);
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 60px,
+      rgba(255,255,255,.02) 61px
+    ),
+    #101010;
+
+  border-top: 1px solid #242424;
+}
+
+
+/* =========================
+   CAR
+========================= */
+
+.car {
+  position: absolute;
+
+  left: 50%;
+  bottom: 18%;
+
+  width: min(88vw, 650px);
+  height: 190px;
+
+  transform:
+    translateX(-50%)
+    translateY(120px)
+    scale(.75);
+
+  opacity: 0;
+
+  transition:
+    transform 1.5s cubic-bezier(.2,.8,.2,1),
+    opacity .8s ease;
+}
+
+.scene.active .car {
+  opacity: 1;
+
+  transform:
+    translateX(-50%)
+    translateY(0)
+    scale(1);
+}
+
+.car-body {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 20px;
+
+  height: 110px;
+
+  border-radius:
+    45px
+    25px
+    18px
+    18px;
+
+  background:
+    linear-gradient(
+      150deg,
+      #343434,
+      #0b0b0b 55%,
+      #202020
+    );
+
+  border: 2px solid #414141;
+
+  transform:
+    perspective(500px)
+    rotateX(3deg);
+
+  box-shadow:
+    0 35px 50px rgba(0,0,0,.8);
+}
+
+.windshield {
+  position: absolute;
+
+  width: 190px;
+  height: 70px;
+
+  left: 50%;
+  top: -50px;
+
+  transform: translateX(-50%) skewX(-12deg);
+
+  background:
+    linear-gradient(
+      135deg,
+      #1c1c1c,
+      #050505
+    );
+
+  border: 2px solid #333;
+
+  border-radius: 20px 20px 5px 5px;
+}
+
+.roof {
+  position: absolute;
+
+  width: 270px;
+  height: 8px;
+
+  left: 50%;
+  top: -8px;
+
+  transform: translateX(-50%);
+
+  background: #333;
+}
+
+.door {
+  position: absolute;
+
+  width: 115px;
+  height: 75px;
+
+  left: 43%;
+  top: 20px;
+
+  border-left: 1px solid #444;
+  border-right: 1px solid #222;
+
+  transform-origin: left center;
+
+  transition:
+    transform 1s cubic-bezier(.7,0,.2,1);
+}
+
+.scene.door-open .door {
+  transform:
+    perspective(400px)
+    rotateY(-58deg);
+}
+
+.headlight {
+  position: absolute;
+
+  width: 60px;
+  height: 14px;
+
+  bottom: 28px;
+
+  background: #fff;
+
+  border-radius: 100%;
+
+  box-shadow:
+    0 0 25px rgba(255,255,255,.7);
+}
+
+.headlight.left {
+  left: 30px;
+}
+
+.headlight.right {
+  right: 30px;
+}
+
+.wheel {
+  position: absolute;
+
+  width: 60px;
+  height: 60px;
+
+  bottom: -25px;
+
+  border-radius: 50%;
+
+  background: #050505;
+
+  border: 8px solid #222;
+
+  box-shadow:
+    inset 0 0 0 8px #111;
+}
+
+.wheel.left {
+  left: 80px;
+}
+
+.wheel.right {
+  right: 80px;
+}
+
+.car-front {
+  position: absolute;
+
+  width: 100px;
+  height: 18px;
+
+  left: 50%;
+  bottom: 10px;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background: #050505;
+}
+
+
+/* =========================
+   RICO
+========================= */
+
+.rico {
+  position: absolute;
+
+  left: 50%;
+  bottom: 25%;
+
+  width: 110px;
+  height: 180px;
+
+  transform:
+    translateX(-10px)
+    translateY(200px)
+    scale(.7);
+
+  opacity: 0;
+
+  z-index: 5;
+
+  transition:
+    transform 1.3s cubic-bezier(.2,.8,.2,1),
+    opacity .4s ease;
+}
+
+.scene.rico-out .rico {
+  opacity: 1;
+
+  transform:
+    translateX(-70px)
+    translateY(0)
+    scale(1);
+}
+
+.duck {
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 90px;
+  height: 150px;
+
+  transform: translateX(-50%);
+}
+
+.duck-body {
+  position: absolute;
+
+  left: 12px;
+  bottom: 25px;
+
+  width: 66px;
+  height: 78px;
+
+  border-radius:
+    48%
+    48%
+    42%
+    42%;
+
+  background: #f3bb18;
+
+  border: 4px solid #111;
+
+  box-shadow:
+    inset -10px -5px 0 rgba(0,0,0,.08);
+}
+
+.duck-head {
+  position: absolute;
+
+  left: 50%;
+  top: 5px;
+
+  width: 76px;
+  height: 70px;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background: #f3bb18;
+
+  border: 4px solid #111;
+}
+
+.eye {
+  position: absolute;
+
+  top: 28px;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #111;
+}
+
+.eye.left {
+  left: 19px;
+}
+
+.eye.right {
+  right: 19px;
+}
+
+.beak {
+  position: absolute;
+
+  left: 50%;
+  bottom: 9px;
+
+  width: 27px;
+  height: 15px;
+
+  transform: translateX(-50%);
+
+  border-radius: 60%;
+
+  background: #e97712;
+
+  border: 3px solid #111;
+}
+
+.cap {
+  position: absolute;
+
+  left: 50%;
+  top: -10px;
+
+  width: 84px;
+  height: 24px;
+
+  transform:
+    translateX(-50%)
+    rotate(-5deg);
+
+  border-radius: 50% 50% 15% 15%;
+
+  background: #333;
+
+  border: 4px solid #111;
+}
+
+.wing {
+  position: absolute;
+
+  width: 30px;
+  height: 58px;
+
+  top: 75px;
+
+  border-radius: 50%;
+
+  background: #e8aa12;
+
+  border: 4px solid #111;
+}
+
+.wing.left {
+  left: -2px;
+
+  transform: rotate(15deg);
+}
+
+.wing.right {
+  right: -2px;
+
+  transform: rotate(-15deg);
+}
+
+.foot {
+  position: absolute;
+
+  width: 32px;
+  height: 13px;
+
+  bottom: 12px;
+
+  border-radius: 50%;
+
+  background: #e97712;
+
+  border: 3px solid #111;
+}
+
+.foot.left {
+  left: 8px;
+}
+
+.foot.right {
+  right: 8px;
+}
+
+
+/* GOLD CHAIN */
+
+.chain {
+  position: absolute;
+
+  z-index: 4;
+
+  left: 37px;
+
+  width: 48px;
+  height: 48px;
+
+  border: 6px solid #ffd43b;
+
+  border-top: 0;
+
+  border-radius: 0 0 50% 50%;
+
+  filter:
+    drop-shadow(0 0 8px rgba(255,210,40,.4));
+}
+
+.chain-one {
+  top: 62px;
+}
+
+.chain-two {
+  top: 69px;
+
+  transform: scale(.75);
+}
+
+
+/* WATCH */
+
+.watch {
+  position: absolute;
+
+  z-index: 8;
+
+  right: -3px;
+  bottom: 28px;
+
+  width: 22px;
+  height: 22px;
+
+  border-radius: 50%;
+
+  background: #ffd43b;
+
+  border: 3px solid #8f6900;
+
+  box-shadow:
+    0 0 12px rgba(255,212,59,.8);
+}
+
+
+/* =========================
+   MONEY
+========================= */
+
+.money-container {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: 10;
+}
+
+.money {
+  position: absolute;
+
+  width: 45px;
+  height: 20px;
+
+  border: 2px solid #6a8f45;
+
+  background: #a8c878;
+
+  color: #233319;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  display: grid;
+  place-items: center;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(var(--rotation));
+
+  animation:
+    moneyFly var(--duration) cubic-bezier(.1,.7,.2,1) forwards;
+}
+
+@keyframes moneyFly {
+  0% {
+    left: 50%;
+    top: 52%;
+
+    opacity: 0;
+
+    transform:
+      translate(-50%, -50%)
+      rotate(0deg)
+      scale(.3);
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  100% {
+    left: var(--x);
+    top: var(--y);
+
+    opacity: 0;
+
+    transform:
+      translate(-50%, -50%)
+      rotate(var(--rotation))
+      scale(1.2);
+  }
+}
+
+
+/* =========================
+   FINAL MESSAGE
+========================= */
+
+.final-message {
+  position: absolute;
+
+  left: 50%;
+  top: 11%;
+
+  transform:
+    translateX(-50%)
+    translateY(-30px);
+
+  width: 90%;
+
+  text-align: center;
+
+  opacity: 0;
+
+  z-index: 15;
+
+  transition:
+    opacity .8s ease,
+    transform .8s ease;
+}
+
+.scene.finished .final-message {
+  opacity: 1;
+
+  transform:
+    translateX(-50%)
+    translateY(0);
+}
+
+.final-message p {
+  font-size: 10px;
+
+  letter-spacing: 4px;
+
+  color: #aaa;
+
+  margin-bottom: 10px;
+}
+
+.final-message h2 {
+  font-size: clamp(30px, 9vw, 60px);
+
+  line-height: .9;
+
+  letter-spacing: -2px;
+
+  color: #fff;
+}
+
+.final-message h2 br + * {
+  color: #f5b900;
+}
+
+#replayBtn {
+  margin-top: 20px;
+
+  padding: 11px 20px;
+
+  border: 1px solid #444;
+
+  border-radius: 50px;
+
+  background: rgba(0,0,0,.5);
+
+  color: #fff;
+
+  cursor: pointer;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes introFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@media (max-width: 600px) {
+
+  .car {
+    bottom: 19%;
+  }
+
+  .rico {
+    bottom: 25%;
+  }
+
+  .moon {
+    width: 60px;
+    height: 60px;
+  }
+
+}
